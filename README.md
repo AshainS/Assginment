@@ -61,7 +61,7 @@ The CRUD operations were developed by the following team members:
     u_id INT(11) AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL,
     password VARCHAR(50) NOT NULL,
-    confirmPassword	VARCHAR(50) NOT NULL
+    confirmPassword VARCHAR(50) NOT NULL
     );
 
   
@@ -77,7 +77,8 @@ The CRUD operations were developed by the following team members:
 4. **Configure Data Source in Tomcat**:
   - Add the following resource to context.xml (located in the conf directory of your Tomcat installation):
 
-  <Resource name="jdbc/StudentDB" auth="Container" type="javax.sql.DataSource"
+     ```bash
+     <Resource name="jdbc/StudentDB" auth="Container" type="javax.sql.DataSource"
           maxTotal="100" maxIdle="30" maxWaitMillis="10000"
           username="root" password="password" driverClassName="com.mysql.cj.jdbc.Driver"
           url="jdbc:mysql://localhost:3306/student"/>
@@ -95,16 +96,19 @@ The CRUD operations were developed by the following team members:
 ### Usage
 
 1. **Registration**:
-  - Access the registration page via http://localhost:8080/student-management-system/register.jsp.
+  - Access the registration page via http://localhost:8082/DynamicWebAppAssignment/Register.jsp.
   - Fill in the username, password, and confirm password fields and submit.
 
 2. **Login**:
-  - Access the login page via http://localhost:8080/student-management-system/login.jsp.
+  - Access the login page via http://localhost:8082/DynamicWebAppAssignment/Login.jsp.
   - Enter the registered username and password to log in.
 
 3. **Student CRUD Operations**:
-  - After logging in, you will be redirected to the home page.
-  - Use the Student Details button to view, create, update, or delete student records.
+  - After logging in, you will be redirected to the home/Dashboard page.
+  - Then go to Student Details option in the left section to operate CRUD operations.
+  - Use the View Records button to view student records.
+  - Use the Add Records button to add new student records.
+  - Use Edit/Delete option in the table to edit/delete the particular record.
 
 ### Acknowledgements
 
